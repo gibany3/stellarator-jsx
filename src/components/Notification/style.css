@@ -1,0 +1,22 @@
+.notification {
+    width: 200px;
+    height: 100px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.success {
+    background: #76ff84;
+}
+
+.danger {
+    background: #ff6a7a;
+}
+
+.info {
+    background: #40ecff;
+}

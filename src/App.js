@@ -1,8 +1,15 @@
 import React, {Component} from 'react';
 import Button from './components/Button';
+import Text from './components/Text';
+import Notification from './components/Notification';
+import Input from './components/Input';
 
 function handleButtonClick() {
 	alert('button clicked')
+}
+
+function onInputChange() {
+    console.log("test");
 }
 
 class App extends Component {
@@ -14,11 +21,14 @@ class App extends Component {
 						Button
 
 					Props:
-						type (possible values: primary - default / secondary / disabled / loading)
-						onButtonClick (function)
+ +						type (possible values: primary - default / secondary / disabled)
+ +						loading (possible values: true / false)
+  						onButtonClick (function)
 				*/}
 
 				<Button onButtonClick={handleButtonClick}>Hello</Button>
+                <br/>
+                <br/>
 
 
 				{/*
@@ -30,7 +40,8 @@ class App extends Component {
 						size (possible values: small / medium - default / large)
 				*/}
 
-
+                <Text size="large" heading={false}>Text</Text>
+                <br/>
 
 				{/*
 					Component:
@@ -40,7 +51,9 @@ class App extends Component {
 						type (possible values: success / danger / info - default)
 				*/}
 
-
+                <Notification type="success" text="Something"></Notification>
+                <br/>
+                <br/>
 
 				{/*
 					Component:
@@ -56,6 +69,8 @@ class App extends Component {
 						error (string)
 						onInputChange (function)
 				*/}
+
+                <Input type='text' size='small'></Input>
 
 
 				{/*
