@@ -9,20 +9,18 @@ class Notification extends React.Component {
     render() {
         return (
             <div className={`notification ${this.props.type}`}>
-                <p>{this.props.text}</p>
+                <div>{this.props.children}</div>
             </div>
         );
     }
 }
 
 Notification.propTypes = {
-    type: PropTypes.string,
-    text: PropTypes.string
+    type: PropTypes.string
 };
 
 Notification.defaultProps = {
-    type: 'info',
-    text: 'Default notification'
+    type: 'info'
 };
 
 export default Notification;

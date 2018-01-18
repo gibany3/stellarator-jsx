@@ -11,7 +11,7 @@ function Input({ type, name, placeholder, label, value, size, error, onInputChan
                 type={`${type}`}
                 name={`${name}`}
                 placeholder={`${placeholder}`}
-                value={`${value}`}
+                value={value}
                 className={`${size}`}
                 onChange={onInputChange}
             />
@@ -19,7 +19,7 @@ function Input({ type, name, placeholder, label, value, size, error, onInputChan
     );
 }
 
-Notification.propTypes = {
+Input.propTypes = {
     type: PropTypes.string,
     name: PropTypes.string,
     placeholder: PropTypes.string,
@@ -30,9 +30,11 @@ Notification.propTypes = {
     onInputChange: PropTypes.func
 };
 
-Notification.defaultProps = {
+Input.defaultProps = {
     type: 'text',
-    size: 'medium'
+    size: 'medium',
+    value: '',
+    placeholder: ''
 };
 
 export default Input;

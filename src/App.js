@@ -8,11 +8,15 @@ function handleButtonClick() {
 	alert('button clicked')
 }
 
-function onInputChange() {
-    console.log("test");
-}
-
 class App extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    getValue(e) {
+        console.log(e.target.name, e.target.value)
+    }
+
 	render() {
 		return (
 			<div>
@@ -51,7 +55,7 @@ class App extends Component {
 						type (possible values: success / danger / info - default)
 				*/}
 
-                <Notification type="success" text="Something"></Notification>
+                <Notification type="danger">Sample text</Notification>
                 <br/>
                 <br/>
 
@@ -70,7 +74,7 @@ class App extends Component {
 						onInputChange (function)
 				*/}
 
-                <Input type='text' size='small'></Input>
+                <Input onInputChange={this.getValue.bind(this)} type='text' size='small' name='username'></Input>
 
 
 				{/*
