@@ -3,9 +3,10 @@ import Button from './components/Button';
 import Text from './components/Text';
 import Notification from './components/Notification';
 import Input from './components/Input';
+import LoginForm from './components/LoginForm';
 
 function handleButtonClick() {
-	alert('button clicked')
+    alert('button clicked')
 }
 
 class App extends Component {
@@ -14,13 +15,13 @@ class App extends Component {
     }
 
     getValue(e) {
-        console.log(e.target.name, e.target.value)
+        console.log(e.target.value)
     }
 
-	render() {
-		return (
-			<div>
-				{/*
+    render() {
+        return (
+            <div>
+                {/*
 					Component:
 						Button
 
@@ -30,12 +31,12 @@ class App extends Component {
   						onButtonClick (function)
 				*/}
 
-				<Button onButtonClick={handleButtonClick}>Hello</Button>
+                <Button onButtonClick={handleButtonClick}>Hello</Button>
                 <br/>
                 <br/>
 
 
-				{/*
+                {/*
 					Component:
 						Text
 
@@ -47,7 +48,7 @@ class App extends Component {
                 <Text size="large" heading={false}>Text</Text>
                 <br/>
 
-				{/*
+                {/*
 					Component:
 						Notification
 
@@ -59,7 +60,7 @@ class App extends Component {
                 <br/>
                 <br/>
 
-				{/*
+                {/*
 					Component:
 						Input
 
@@ -74,10 +75,18 @@ class App extends Component {
 						onInputChange (function)
 				*/}
 
-                <Input onInputChange={this.getValue.bind(this)} type='text' size='small' name='username'></Input>
+                <Input
+                    onInputChange={this.getValue.bind(this)}
+                    type='text'
+                    size='medium'
+                    name='username'
+                    label='Test input'>
+                </Input>
+                <br/>
+                <br/>
 
 
-				{/*
+                {/*
 					Component:
 						LoginForm
 
@@ -89,9 +98,10 @@ class App extends Component {
 						Login and password should be printed in the console on submit button click
 				*/}
 
+                <LoginForm></LoginForm>
 
 
-				{/*
+                {/*
 					Component:
 						Form
 
@@ -100,9 +110,9 @@ class App extends Component {
 				*/}
 
 
-			</div>
-		);
-	}
+            </div>
+        );
+    }
 }
 
 export default App;

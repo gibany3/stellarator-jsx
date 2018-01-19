@@ -2,19 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import './style.css'
 
-function Input({ type, name, placeholder, label, value, size, error, onInputChange }) {
+function Input({ type, name, placeholder, label, value, size, onInputChange }) {
     return (
         <div>
-            <label htmlFor={`${label}`}>{`${label}`}</label>
-            <br/>
+            <label>{label}
             <input
-                type={`${type}`}
-                name={`${name}`}
-                placeholder={`${placeholder}`}
+                type={type}
+                name={name}
+                placeholder={placeholder}
                 value={value}
-                className={`${size}`}
+                className={size}
                 onChange={onInputChange}
             />
+            </label>
         </div>
     );
 }
@@ -26,7 +26,6 @@ Input.propTypes = {
     label: PropTypes.string,
     value: PropTypes.string,
     size: PropTypes.string,
-    error: PropTypes.string,
     onInputChange: PropTypes.func
 };
 
@@ -34,6 +33,8 @@ Input.defaultProps = {
     type: 'text',
     size: 'medium',
     value: '',
+    name: '',
+    label: '',
     placeholder: ''
 };
 
