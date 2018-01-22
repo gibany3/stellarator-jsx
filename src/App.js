@@ -30,6 +30,7 @@ class App extends Component {
  +						loading (possible values: true / false)
   						onButtonClick (function)
 				*/}
+				<Button onButtonClick={handleButtonClick}>Hello</Button>
 
                 <Button onButtonClick={handleButtonClick}>Hello</Button>
                 <br/>
