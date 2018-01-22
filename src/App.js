@@ -31,8 +31,6 @@ class App extends Component {
   						onButtonClick (function)
 				*/}
 				<Button onButtonClick={handleButtonClick}>Hello</Button>
-
-                <Button onButtonClick={handleButtonClick}>Hello</Button>
                 <br/>
                 <br/>
 
